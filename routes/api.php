@@ -18,7 +18,6 @@ Route::post('login',[\App\Http\Controllers\authController::class,'login']);
 Route::post('register',[\App\Http\Controllers\authController::class,'register']);
 
 Route::group(['middleware'=>'auth.jwt'],function (){
-    Route::get('logout',[\App\Http\Controllers\authController::class,'logout']);
     //stagiaire routes
     Route::get('stagiaires',[]);
     Route::get('stagiaires/{id}',[]);
