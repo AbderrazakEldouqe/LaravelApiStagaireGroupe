@@ -14,6 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('login',[\App\Http\Controllers\authController::class,'login']);
+Route::post('register',[\App\Http\Controllers\authController::class,'register']);
+
+Route::group(['middleware'=>'auth.jwt'],function (){
+    Route::get('logout',[\App\Http\Controllers\authController::class,'logout']);
+    //stagiaire routes
+    Route::get('stagiaires',[]);
+    Route::get('stagiaires/{id}',[]);
+    Route::post('stagiaires',[]);
+    Route::put('stagiares/{id}',[]);
+    Route::delete('stagiaires/{id}',[]);
+    //groupe routes
+    Route::get('groupes',[]);
+    Route::get('groupes/{id}',[]);
+    Route::post('groupes',[]);
+    Route::put('groupes/{id}',[]);
+    Route::delete('groupes/{id}',[]);
 });
