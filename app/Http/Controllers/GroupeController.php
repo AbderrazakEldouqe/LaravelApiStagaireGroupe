@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use JWTAuth;
 use App\Models\Groupe;
 use Illuminate\Http\Request;
 
