@@ -25,9 +25,9 @@ Route::group(['middleware'=>'auth.jwt'],function (){
     Route::put('stagiares/{id}',[]);
     Route::delete('stagiaires/{id}',[]);
     //groupe routes
-    Route::get('groupes',[]);
-    Route::get('groupes/{id}',[]);
-    Route::post('groupes',[]);
-    Route::put('groupes/{id}',[]);
-    Route::delete('groupes/{id}',[]);
+    Route::get('groupes',[\App\Http\Controllers\GroupeController::class,'index']);
+    Route::get('groupes/{id}',[\App\Http\Controllers\GroupeController::class,'show']);
+    Route::post('groupes',[\App\Http\Controllers\GroupeController::class,'store']);
+    Route::put('groupes/{id}',[\App\Http\Controllers\GroupeController::class,'update']);
+    Route::delete('groupes/{id}',[\App\Http\Controllers\GroupeController::class,'destroy']);
 });
