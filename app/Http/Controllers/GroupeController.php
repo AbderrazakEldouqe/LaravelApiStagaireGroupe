@@ -24,7 +24,7 @@ class GroupeController extends Controller
     public function show($id)
     {
        /* $task = $this->user->tasks()->find($id);*/
-        $groupe=Groupe::find($id);
+        $groupe=Groupe::where('groupeId',$id)->first();
 
         if (!$groupe) {
             return response()->json([
@@ -60,7 +60,7 @@ class GroupeController extends Controller
 
     public function update(Request $request, $id)
     {
-       $groupe=Groupe::find($id);
+       $groupe=Groupe::where('groupeId',$id)->first();
 
         if (!$groupe) {
             return response()->json([
@@ -87,7 +87,7 @@ class GroupeController extends Controller
 
     public function destroy($id)
     {
-       $groupe=Groupe::find($id);
+        $groupe=Groupe::where('groupeId',$id)->first();
 
         if (!$groupe) {
             return response()->json([

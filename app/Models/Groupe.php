@@ -16,7 +16,7 @@ class Groupe extends Model
         parent::boot();
 
         static::creating(function ($query) {
-            $query->groupeId = Str::random('20');
+            $query->groupeId = Str::random('30');
         });
     }
 

@@ -17,7 +17,7 @@ class Stagiaire extends Model
         parent::boot();
 
         static::creating(function ($query) {
-            $query->stagiaireId = Str::random('20');
+            $query->stagiaireId = Str::random('30');
         });
     }
 

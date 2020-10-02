@@ -29,7 +29,7 @@ class User extends Authenticatable implements JWTSubject
         parent::boot();
 
         static::creating(function ($query) {
-            $query->userId =Str::random('20');
+            $query->userId =Str::random('30');
         });
     }
 

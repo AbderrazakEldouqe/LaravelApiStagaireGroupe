@@ -40,7 +40,7 @@ class authController extends Controller
 
             return response()->json([
                 'success'   =>  true,
-                'data'      =>  $user
+                'user'      =>  $user
             ], 200);
         }
 

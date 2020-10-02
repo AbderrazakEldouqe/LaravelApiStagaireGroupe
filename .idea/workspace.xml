@@ -22,6 +22,11 @@
     <list default="true" id="738bcba1-1f39-491a-ae9c-8ddf0f2e2303" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GroupeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GroupeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/authController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/authController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Groupe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Groupe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Stagiaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Stagiaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +185,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601553733598</updated>
       <workItem from="1601553735294" duration="5880000" />
-      <workItem from="1601583907248" duration="3681000" />
+      <workItem from="1601583907248" duration="3734000" />
+      <workItem from="1601631231252" duration="1463000" />
     </task>
     <servers />
   </component>
@@ -197,6 +203,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="46" key="#com.intellij.ide.util.MemberChooser" timestamp="1601555928642">
@@ -207,6 +214,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1601587384549" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1601631810517">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1601631810517" />
     <state x="339" y="17" width="670" height="676" key="search.everywhere.popup" timestamp="1601559779235">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
