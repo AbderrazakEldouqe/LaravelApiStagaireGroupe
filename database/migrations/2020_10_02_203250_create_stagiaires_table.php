@@ -18,8 +18,8 @@ class CreateStagiairesTable extends Migration
             $table->string('stagiaireId');
             $table->string('fullName');
             $table->date('birthDate');
-            $table->unsignedBigInteger('groupId');
-            $table->foreign('groupId')
+            $table->unsignedBigInteger('groupeId');
+            $table->foreign('groupeId')
                 ->references('id')
                 ->on('groupes')
                 ->onDelete('cascade');

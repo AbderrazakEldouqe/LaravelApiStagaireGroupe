@@ -25,11 +25,11 @@ class GroupeController extends Controller
     {
        /* $task = $this->user->tasks()->find($id);*/
         $groupe=Groupe::where('groupeId',$id)->first();
-
+        //dd($groupe->stagiaires);
         if (!$groupe) {
             return response()->json([
                 'success' => false,
-                'message' => 'Sorry, task with id ' . $id . ' cannot be found.'
+                'message' => 'Sorry, group with id ' . $id . ' cannot be found.'
             ], 400);
         }
 
@@ -54,7 +54,7 @@ class GroupeController extends Controller
         else
             return response()->json([
                 'success' => false,
-                'message' => 'Sorry, groupe could not be added.'
+                'message' => 'Sorry, group could not be added.'
             ], 500);
     }
 
@@ -65,7 +65,7 @@ class GroupeController extends Controller
         if (!$groupe) {
             return response()->json([
                 'success' => false,
-                'message' => 'Sorry, groupe with id ' . $id . ' cannot be found.'
+                'message' => 'Sorry, group with id ' . $id . ' cannot be found.'
             ], 400);
         }
 
@@ -75,12 +75,13 @@ class GroupeController extends Controller
 
         if ($updated) {
             return response()->json([
-                'success' => true
+                'success' => true,
+                'groupe'=> $groupe
             ]);
         } else {
             return response()->json([
                 'success' => false,
-                'message' => 'Sorry, groupe could not be updated.'
+                'message' => 'Sorry, group could not be updated.'
             ], 500);
         }
     }
@@ -92,7 +93,7 @@ class GroupeController extends Controller
         if (!$groupe) {
             return response()->json([
                 'success' => false,
-                'message' => 'Sorry, groupe with id ' . $id . ' cannot be found.'
+                'message' => 'Sorry, group with id ' . $id . ' cannot be found.'
             ], 400);
         }
 
@@ -103,7 +104,7 @@ class GroupeController extends Controller
         } else {
             return response()->json([
                 'success' => false,
-                'message' => 'groupe could not be deleted.'
+                'message' => 'group could not be deleted.'
             ], 500);
         }
     }

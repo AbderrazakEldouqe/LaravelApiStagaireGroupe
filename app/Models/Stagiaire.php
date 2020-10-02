@@ -21,7 +21,7 @@ class Stagiaire extends Model
         });
     }
 
-    public function Groupe(){
+    public function groupe(){
         return $this->belongsTo(Groupe::class);
     }
 }

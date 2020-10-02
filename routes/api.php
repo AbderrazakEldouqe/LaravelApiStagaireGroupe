@@ -20,11 +20,11 @@ Route::post('register',[\App\Http\Controllers\authController::class,'register'])
 Route::group(['middleware'=>'auth.jwt'],function (){
     Route::post('logout',[\App\Http\Controllers\authController::class,'logout']);
     //stagiaire routes
-    Route::get('stagiaires',[]);
-    Route::get('stagiaires/{id}',[]);
-    Route::post('stagiaires',[]);
-    Route::put('stagiares/{id}',[]);
-    Route::delete('stagiaires/{id}',[]);
+    Route::get('stagiaires',[\App\Http\Controllers\StagiaireController::class,'index']);
+    Route::get('stagiaires/{id}',[\App\Http\Controllers\StagiaireController::class,'show']);
+    Route::post('stagiaires',[\App\Http\Controllers\StagiaireController::class,'store']);
+    Route::put('stagiares/{id}',[\App\Http\Controllers\StagiaireController::class,'update']);
+    Route::delete('stagiaires/{id}',[\App\Http\Controllers\StagiaireController::class,'destroy']);
     //groupe routes
     Route::get('groupes',[\App\Http\Controllers\GroupeController::class,'index']);
     Route::get('groupes/{id}',[\App\Http\Controllers\GroupeController::class,'show']);

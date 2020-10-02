@@ -20,7 +20,7 @@ class Groupe extends Model
         });
     }
 
-    public function Stagiaires()
+    public function stagiaires()
     {
         return $this->hasMany(Stagiaire::class);
     }
